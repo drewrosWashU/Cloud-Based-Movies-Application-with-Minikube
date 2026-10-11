@@ -1,0 +1,41 @@
+li img {
+    width: 95%;
+    border-style: double;
+    border-width: thick;
+    border-color: blue;
+    border-radius: 10px;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 0;
+}
+
+li {
+    margin: 10px;
+    padding: 10px;
+    border: 3px dotted black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 3px dotted black;
+}
+
+.hide {
+    display: none;
+}
+
+.contentBlock:hover + .hide {
+    display: block;
+}

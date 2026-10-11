@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movies</title>
+        <link rel="stylesheet" href="{{ url_for('static', path='/movies.css') }}">
+    </head>
+    <body>
+        <h1>Movies</h1>
+        <ul>
+            {% for movie in movies %}
+                <li>
+                    <h2 class="contentBlock">{{ movie.title }}</h2>
+                    <p class="hide">Overview: {{ movie.overview }}</p>
+                    <p>Release Date: {{ movie.release_date }}</p>
+                    <p>Average Rating: {{ movie.vote_average }}</p>
+                    <img src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}.jpg" alt="Poster"></img>
+                </li>
+            {% endfor %}
+        </ul>
+        
+    </body>
+</html>
