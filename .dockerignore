@@ -1,0 +1,8 @@
+*.yaml
+*.yml
+envVariables
+.env
+.git
+__pycache__/
+.venv/
+venv/

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: movies
-          image: drewroswashu/lab3:latest
+          image: drewroswashu/lab4:latest
           ports:
             - containerPort: 8000
           env:
