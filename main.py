@@ -16,7 +16,7 @@ s3 = boto3.resource("s3",
                     aws_secret_access_key=aws_secret_access_key)
 
 def get_data():
-    obj = s3.Object("drew-cse-4207", "lab2/movie_data.json")
+    obj = s3.Object(os.environ["BUCKET"], "lab2/movie_data.json")
     body = obj.get()['Body'].read()
     json_data = json.loads(body)
     return json_data
